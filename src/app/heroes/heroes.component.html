@@ -1,0 +1,9 @@
+<h2 class="title">My Heroes</h2>
+<article class="heroes">
+    <section *ngFor="let hero of heroes" (click)="onSelect(hero)" class="hero" [class.selected-hero]="hero === selectedHero">
+        <h1 class="badge">{{hero.id}} </h1>
+        <h2>{{hero.name}}</h2>
+    </section>
+</article>
+
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>

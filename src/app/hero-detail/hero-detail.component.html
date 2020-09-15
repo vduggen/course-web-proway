@@ -1,0 +1,10 @@
+<article class="details-heroes" *ngIf="selectedHero">
+    <h1>Details Hero</h1>
+    <h2 class="detail-name-hero">{{selectedHero.name | uppercase}} Details</h2>
+    <div class="container-info-hero"><span>Id: </span>{{selectedHero.id}}</div>
+    <div class="container-info-hero">
+        <label for="hero-name">Name:</label>
+        <input [(ngModel)]="selectedHero.name" id="hero-name" name="hero-name" placeholder="name" />
+    </div>
+    <button (click)="onSelect(hero)" class="button-close-details">Close</button>
+</article>
