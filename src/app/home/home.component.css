@@ -1,6 +1,25 @@
+.badge {
+    font-weight: bold;
+}
+
+.title {
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
 span,
 label {
     font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .detail-name-hero {
@@ -44,22 +63,43 @@ label {
     transition: ease-in-out .5s;
 }
 
-nav button {
-    width: 150px;
-    height: 35px;
-    margin: 0 .2rem;
-    border: none;
+.hero {
+    width: 95%;
+    height: 180px;
     background: cornflowerblue;
-    font: 500 .8rem Arial;
-    color: #fff;
-    text-transform: capitalize;
     border-radius: 4px;
     box-shadow: 0 0 14px #00000060;
     cursor: pointer;
     transition: ease-in-out .3s;
-    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-nav button:hover {
+.hero:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 14px #000000AA;
     opacity: .8;
+}
+
+.heroes {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    place-items: center;
+    row-gap: 1.5rem;
+}
+
+.heroes a {
+    width: 100%;
+    height: 100%;
+}
+
+.hero h1 {
+    color: #fff;
+}
+
+.hero h2 {
+    font-weight: bold;
+    color: #333;
 }

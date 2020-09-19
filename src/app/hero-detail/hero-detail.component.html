@@ -6,4 +6,9 @@
         <label for="hero-name">Name:</label>
         <input [(ngModel)]="hero.name" id="hero-name" name="hero-name" placeholder="name" />
     </div>
+
+    <nav>
+        <button (click)="goBack()">go back</button>
+        <button (click)="save()">save</button>
+    </nav>
 </article>

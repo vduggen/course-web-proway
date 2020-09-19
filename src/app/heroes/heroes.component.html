@@ -5,7 +5,16 @@
             <h1 class="badge">{{hero.id}} </h1>
             <h2>{{hero.name}}</h2>
         </a>
+        <button class="delete" title="delete hero" (click)="delete(hero)">x</button>
     </section>
 </article>
 
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+<div id="addHero-container">
+    <label>Hero name:</label>
+
+    <input #heroName />
+
+    <button (click)="add(heroName.value); heroName.value=''">
+      Add
+    </button>
+</div>
